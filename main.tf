@@ -12,7 +12,7 @@ module "eks" {
     desired_nodes = 2
     max_nodes  = 2
     min_nodes  = 2
-    node_instance_type = "t3.medium"
+    node_instance_type = "c7i-flex.large"
 }
 
 module "s3" {
