@@ -18,3 +18,24 @@ module "eks" {
 module "s3" {
     source = "./modules/s3"
 }
+
+module "ecr_order" {
+  source = "./modules/ecr"
+
+  repository_name = "med-erp/order"
+  environment     = "dev"
+}
+
+module "ecr_product" {
+  source = "./modules/ecr"
+
+  repository_name = "med-erp/product"
+  environment     = "dev"
+}
+
+module "ecr_user" {
+  source = "./modules/ecr"
+
+  repository_name = "med-erp/user"
+  environment     = "dev"
+}
